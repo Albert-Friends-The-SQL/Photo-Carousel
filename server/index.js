@@ -30,7 +30,7 @@ app.get('/api/products/shoes', (req, res) => {
         colorSet: allColors,
         imgData: data
       }
-
+      console.log(prettyData);
       res.send(prettyData)
     }
   })
@@ -55,6 +55,8 @@ app.get('/api/products/CarouselItem', (req, res) => {
     }
   })
 });
+
+
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
