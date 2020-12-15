@@ -2,37 +2,36 @@
 
 GET:
 
-/api/shoeProduct  : returns an JSON Object
+/api/Products:shoeid  : returns an JSON Object
 
   Shape -
-  {color1 : [Image url,
-    ...
-  },...],
-  color2 : [{},...],
-  color3 : [{},...]}
+  {id : listingid,
+  color1 : [{url:Image url, id:photoid},...,...],
+  color2 : [{url:Image url, id:photoid},...,...],
+  color3 : [{url:Image url, id:photoid},...,...]}
 
 
 
 POST:
 
-/api/shoeProduct  : returns a success code of 200 / fail code of 500
+/api/Products:shoeid  : returns a success code of 200 / fail code of 500
 
-  body: {name: NMD , color: red , image link : "AWS LINK"}
+  body: {Listing_id: listingid , color: red , image link : "AWS LINK"}
 
 
 
 PUT:
 
-/api/shoeProduct  : returns a success code of 200 / fail code of 501
+/api/Products:shoeid  : returns a success code of 200 / fail code of 501
 
-  body : {OldLink: "AWS LINK" image link : "AWS LINK"}
+  body : {photo_id: photoid , image link : "AWS LINK"}
 
 
 
 DELETE:
 
-/api/shoeProduct  : returns an object
+/api/Products:shoeid  : returns an object
 
-  query: {name: NMD} or {name: NMD, color : colorname}
+  query: {Listing_id: listingid} or {id: listingid, color : colorname} || {photo_id: photoid}
 
   removes all rows in the Shoes table that has all of the queried fields

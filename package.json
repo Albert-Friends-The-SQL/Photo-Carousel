@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server/index.js",
+    "start": "nodemon ./Server2/index.js",
     "bundle": "webpack --watch",
     "seed": "mysql -u root -p < /Users/jasperchen/HRSJO2/fec/Adidas-Main-Carousel-Product-Specs/schema.sql",
     "test": "jest"
@@ -15,10 +15,13 @@
   "dependencies": {
     "aws-sdk": "^2.802.0",
     "axios": "^0.21.0",
+    "cassandra-driver": "^4.6.1",
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "jest": "^26.6.3",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.6",
+    "pg": "^8.5.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "sharp": "^0.26.3",
@@ -42,6 +45,8 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "k6": "0.0.0",
+    "newrelic": "^7.0.2",
     "style-loader": "^2.0.0",
     "webpack": "^5.3.2",
     "webpack-cli": "^4.1.0"
